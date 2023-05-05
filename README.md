@@ -14,6 +14,9 @@ Afterwards following script can be used to update .bashrc or just edit it manual
 bash ~/setup/setup_environment
 ```
 
+Also replace navigation2.launch.py file with file in setup directory. Small adjustments have been made to launch tf between map and base link so nav2 will work.
+
+
 Finally build project by using:
 ```bash
 colcon build --symlink-install
@@ -23,5 +26,10 @@ colcon build --symlink-install
 # Running simulator
 To run gazebo turtlebot3 use command (it will take long time to load fully don't panic):
 ```bash
-ros2 launch turtlebot3_gazebo turtlebot3_house.launch.py 
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py 
+```
+
+To run gazebo turtlebot3 use command (it will take long time to load fully don't panic):
+```bash
+ros2 launch turtlebot3_navigation2 navigation2.launch.py
 ```
