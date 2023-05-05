@@ -14,6 +14,9 @@ Afterwards following script can be used to update .bashrc or just edit it manual
 bash ~/setup/setup_environment
 ```
 
+Also replace navigation2.launch.py file with file in setup directory. Small adjustments have been made to launch tf between map and base link so nav2 will work.
+
+
 Finally build project by using:
 ```bash
 colcon build --symlink-install
