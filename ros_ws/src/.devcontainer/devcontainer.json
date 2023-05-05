@@ -40,6 +40,7 @@
         "source=${localWorkspaceFolder}/../cache/build,target=/home/ws/build,type=bind",
         "source=${localWorkspaceFolder}/../cache/install,target=/home/ws/install,type=bind",
         "source=${localWorkspaceFolder}/../cache/log,target=/home/ws/log,type=bind",
+        "source=${localWorkspaceFolder}/../../setup/,target=/home/user/setup,type=bind",
         "source=${localWorkspaceFolder}/../cache/.vscode,target=/home/ws/.vscode,type=bind"
     ],
     "postCreateCommand": "sudo rosdep update && sudo rosdep install --from-paths src --ignore-src -y && sudo chown -R USERNAME /home/ws/"

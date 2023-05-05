@@ -13,7 +13,9 @@ sudo apt update && sudo apt install python3-vcstool
 rosdep update
 rosdep install --from-paths src --ignore-src  -y
 
-sudo apt install ros-$ROS_DISTRO-dynamixel*
-sudo apt install ros-$ROS_DISTRO-turtlebot3*
+sudo apt install -y ros-$ROS_DISTRO-dynamixel*
+sudo apt install -y ros-$ROS_DISTRO-turtlebot3*
 
 rm turtlebot3.repos
+
+source /opt/ros/$ROS_DISTRO/setup.bash
