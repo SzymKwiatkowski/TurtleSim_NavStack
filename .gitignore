@@ -1,0 +1,19 @@
+# VSCode ignores
+.vscode/*
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+# Local cached files
+ros_ws/cache/build/
+ros_ws/cache/install/
+ros_ws/cache/log/
