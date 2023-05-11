@@ -48,7 +48,7 @@ export TURTLEBOT3_MODEL=waffle
 
 This enable turtlebot3_gazebo simulator by giving it model variable. Then to run simulator use:
 ```bash
-ros2 launch turtlebot3_gazebo turtlebot3_house.launch.py
+ros2 launch turtlebot3_gazebo turtlebot3_house.launch.py x_pose:=-4.0 y_pose:=4.0
 ```
 
 Afterwards you can run navigator in separate terminal:
