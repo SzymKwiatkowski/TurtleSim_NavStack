@@ -28,7 +28,7 @@ All can be installed via rosdep.
 # Install
 To use package install requirements by using:
 ```bash
-rosdep install --from-path src -y
+rosdep install --from-path src -y --rosdistro $ROS_DISTRO
 ```
 
 # Usage:
