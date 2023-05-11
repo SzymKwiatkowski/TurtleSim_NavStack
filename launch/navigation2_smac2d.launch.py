@@ -24,23 +24,20 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
-TURTLEBOT3_MODEL = os.environ['TURTLEBOT3_MODEL']
-
-
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time', default='false')
     map_dir = LaunchConfiguration(
         'map',
         default=os.path.join(
-            get_package_share_directory('turtlebot3_navigation2'),
+            get_package_share_directory('navigation2_turtle'),
             'map',
-            'turtlebot3_world.yaml'))
+            'house_map.yaml'))
 
-    param_file_name = TURTLEBOT3_MODEL + '.yaml'
+    param_file_name = 'waffle_smac2d' + '.yaml'
     param_dir = LaunchConfiguration(
         'params_file',
         default=os.path.join(
-            get_package_share_directory('turtlebot3_navigation2'),
+            get_package_share_directory('navigation2_turtle'),
             'param',
             param_file_name))
 
@@ -86,10 +83,12 @@ def generate_launch_description():
         Node(
             package='tf2_ros',
             executable='static_transform_publisher',
-            arguments=["1", "0", "0", "0", "0", "0", "map", "odom"]),
+            arguments=["1.9658", "0.4985", "-0.017", "0", "0", "0", "map", "odom"]
+            ),
         
         Node(
             package='tf2_ros',
             executable='static_transform_publisher',
-            arguments=["1", "0", "0", "0", "0", "0", "odom", "base_link"]),
+            arguments=["-1.8658", "-0.4985", "0.017", "0", "0", "0", "odom", "base_footprint"]
+            ),
     ])

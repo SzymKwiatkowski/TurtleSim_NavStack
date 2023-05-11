@@ -32,15 +32,15 @@ def generate_launch_description():
     map_dir = LaunchConfiguration(
         'map',
         default=os.path.join(
-            get_package_share_directory('turtlebot3_navigation2'),
+            get_package_share_directory('navigation2_turtle'),
             'map',
             'house_map.yaml'))
 
-    param_file_name = TURTLEBOT3_MODEL + '.yaml'
+    param_file_name = 'waffle_theta_star' + '.yaml'
     param_dir = LaunchConfiguration(
         'params_file',
         default=os.path.join(
-            get_package_share_directory('turtlebot3_navigation2'),
+            get_package_share_directory('navigation2_turtle'),
             'param',
             param_file_name))
 
@@ -86,10 +86,12 @@ def generate_launch_description():
         Node(
             package='tf2_ros',
             executable='static_transform_publisher',
-            arguments=["2.0", "0.5", "-0.008", "0", "0", "0", "map", "odom"]),
+            arguments=["1.9658", "0.4985", "-0.017", "0", "0", "0", "map", "odom"]
+            ),
         
         Node(
             package='tf2_ros',
             executable='static_transform_publisher',
-            arguments=["0", "0", "0", "0", "0", "0", "odom", "base_link"]),
+            arguments=["-1.8658", "-0.4985", "0.017", "0", "0", "0", "odom", "base_footprint"]
+            ),
     ])
