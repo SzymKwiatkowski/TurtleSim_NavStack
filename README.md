@@ -57,7 +57,7 @@ Afterwards you can run navigator in separate terminal:
 ros2 launch navigation2_turtle navigation2_navfn.launch.py
 ```
 
-2. 
+2. Smac 2d 
 ```bash
 ros2 launch navigation2_turtle navigation2_smac2d.launch.py 
 ```
