@@ -68,3 +68,9 @@ ros2 launch navigation2_turtle navigation2_theta_star.launch.py
 ```
 
 You can also use different planner by changing and configuring it in planner_server parameters in `.yaml` file in `param` directory.
+
+To set goal point and measure path length run executable:
+```bash
+ros2 run navigation2_dist path_len
+```
+You can change goal point coordinates in `path_len.py` file in `navigation2_dist` package.
